@@ -70,7 +70,7 @@ dtheta = diff(theta,t);
 dpsi = diff(psi,t);         
 
 % Evaluate angular velocity and acceleration - comprised of local rotations (i.e. derivatives of phi, theta, gamma) plus derivative of global rotation
-w = [dphi;dtheta;dpsi]+[diff(globalangle(1),t);diff(globalangle(2),t);diff(globalangle(3),t)]; %angular velocity
+w = [dphi, dtheta, dpsi] + [diff(globalangle(1),t), diff(globalangle(2),t), diff(globalangle(3),t)]; %angular velocity
 dw = diff(w,t); %angular acceleration
 
 % display(w)
